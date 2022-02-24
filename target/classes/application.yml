@@ -1,0 +1,31 @@
+server:
+  port: 8899
+dbName: test_tools_db
+
+spring:
+  application:
+    name: own-mybatis
+
+  datasource:
+    db1:
+      jdbc-url: jdbc:mysql://172.18.9.248:3306/${dbName}?useUnicode=true&characterEncoding=utf8
+      username: webvm
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+    db2:
+      jdbc-url: jdbc:mysql://172.18.9.245:3306/${dbName}?useUnicode=true&characterEncoding=utf8
+      username: webvm
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    url: jdbc:mysql://172.18.9.248:3306/${dbName}?useUnicode=true&characterEncoding=utf8
+#    username: webvm
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.jn.ley.model
+
